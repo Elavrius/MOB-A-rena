@@ -1,0 +1,11 @@
+bonusMinPhysicalDamage	50
+bonusMaxPhysicalDamage	50
+bonusMinMagicDamage	50
+bonusMaxMagicDamage	50
+bonusSpeed	50
+bonusHP	50
+bonusMP	50
+bonusNaturalArmor	50
+bonusMagicArmor	50
+bonusCritChance	25
+price	1500

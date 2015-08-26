@@ -1,0 +1,10 @@
+minPhysicalDamage	50
+maxPhysicalDamage	100
+minMagicDamage	50
+maxMagicDamage	50
+speed	120
+HP	150
+MP	50
+naturalArmor	50
+magicArmor	50
+critChance	20
