@@ -11,8 +11,5 @@ GameInfo(){
 }
 public static Stage stage;
 public static Scene scene1;
-public static Scene scene2;
-public static Scene scene3;
-public static Scene scene4;
 
 }

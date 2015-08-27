@@ -10,13 +10,7 @@ public class Team {
 	}
 
 	public void setChampion(Champion ch, int index) {
-		if (champion[index] != null) {
-			String message = "This champion slot is occupied with "
-					+ ch.getName();
-			Utility.showMessage(message);
-		} else {
 			champion[index] = ch;
-		}
 	}
 
 	public Champion getChampion(int nr) {

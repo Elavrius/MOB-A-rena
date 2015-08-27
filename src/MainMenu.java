@@ -36,7 +36,7 @@ public class MainMenu extends Application {
 		stage.setTitle("Arena");
 		coin = new AnimatedSprite("data/assets/images/coin3.png", 47, 47, 3, 2,	5);
 		coin.setReverse(true);
-		coin.update(460, 35);
+		coin.update(500, 35);
 		choose = 0;
 
 		canvas = new Canvas(600, 200);
@@ -68,7 +68,7 @@ public class MainMenu extends Application {
 	public void changeActiveButton() {
 		if (choose == 1) {
 			choose = 0;
-			coin.update(460, 35);
+			coin.update(500, 35);
 		} else if (choose == 0) {
 			choose = 1;
 			coin.update(350, 130);
@@ -77,9 +77,9 @@ public class MainMenu extends Application {
 
 	public void render() {
 		gc.clearRect(0, 0, 600, 200);
-		gc.fillText("Player VS Player", 100, 70);
+		gc.fillText("Player VS Player", 50,70);
 		gc.fillText("Exit", 250, 170);
-		gc.strokeText("Player VS Player", 100, 70);
+		gc.strokeText("Player VS Player", 50, 70);
 		gc.strokeText("Exit", 250, 170);
 		coin.render(gc);
 	}
@@ -99,7 +99,6 @@ public class MainMenu extends Application {
 				try {
 					Thread.sleep(200);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				stage.close();
@@ -123,12 +122,12 @@ public class MainMenu extends Application {
 
 					} else if (choose == 0) {
 						try {
-							new PvPMenu().start(new Stage());
+							new PvPMainStage().start(new Stage());
 						} catch (Exception e1) {
 							e1.printStackTrace();
 							String message = "Can't open PvP Menu "
 									+ e1.getStackTrace();
-							Utility.showMessage(message);
+							Utility.showErrorMessage(message);
 						}
 
 						stage.close();

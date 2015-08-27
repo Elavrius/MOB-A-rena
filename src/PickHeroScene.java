@@ -58,9 +58,11 @@ public class PickHeroScene extends Scene{
 	public void startAnimation(){
 		animation.start();
 	}
+
 	public void stopAnimation(){
 		animation.stop();
 	}
+
 	public void render(){
 		((SetChampionButton) buttons[activeButton]).drawInfo(gc);
 		for(PickButton button: buttons){

@@ -1,7 +1,6 @@
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 
@@ -15,7 +14,6 @@ public class PickButton extends Canvas {
 	private int x;// top left x
 	private int y;// top left y
 
-
 	GraphicsContext gc;
 
 	PickButton(  int x, int y, int width, int height) {
@@ -27,7 +25,6 @@ public class PickButton extends Canvas {
 		move(this.x, this.y);
 		gc = this.getGraphicsContext2D();
 	}
-
 
 	public void render() {
 		gc.clearRect(0, 0, width, height);
@@ -51,8 +48,6 @@ public class PickButton extends Canvas {
 		this.setTranslateX(x);
 		this.setTranslateY(y);
 	}
-	
-
 
 	public void use() {
 		//To do

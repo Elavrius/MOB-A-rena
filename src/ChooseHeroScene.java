@@ -60,8 +60,8 @@ public class ChooseHeroScene extends Scene {
 	}
 	public void returnToPreviousScene(){
 		this.stopAnimation();
-		((PvPMenuMainScene) previousScene).startAnimation();
-		GameInfo.stage.setScene(previousScene);
+		((PvPMenuMainScene) GameInfo.scene1).startAnimation();
+		GameInfo.stage.setScene(GameInfo.scene1);
 		
 	}
 	
@@ -116,12 +116,9 @@ public class ChooseHeroScene extends Scene {
 	}
 
 	public void render() {
-		heroButton.render();
-		b1.render();
-		b2.render();
-		b3.render();
-		b4.render();
-		back.render();
+		for(int i=0; i<6;i++){
+			buttons[i].render();
+		}
 	}
 
 }
