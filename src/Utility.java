@@ -13,11 +13,13 @@ public class Utility {
 
 	static boolean printLog = true;// regulates if system info will be shown
 
+	//return safeImage in case if couldn't find intended image
 	public static Image safeImage() {
 		final Image safeImage = new Image("file:data/assets/images/coin.png");
 		return safeImage;
 	}
 
+	// returns List of images made from single image according to some specifications
 	public static ArrayList<Image> makeSpriteOfImage(String path, int width,
 			int height, int x, int y, int amount) {
 		Image image = new Image("file:" + path);
@@ -37,16 +39,13 @@ public class Utility {
 		} catch (Exception e) {
 			sprite.add(safeImage());
 			String message = "Can't crop " + path + " image";
-			Utility.showMessage(message);
+			Utility.showErrorMessage(message);
 		}
 
 		return sprite;
 	}
 
-	public static void showErrorMessage(String message) {
-		System.out.println(message);
-	}
-
+	//checks if path exists
 	public static boolean pathExists(String path) {
 		File f = new File(path);
 		if (f.exists()) {
@@ -59,6 +58,7 @@ public class Utility {
 
 	}
 
+	//returns string text read from file
 	public static String getText(String path) {
 		String story = "";
 		if (pathExists(path)) {
@@ -75,6 +75,7 @@ public class Utility {
 		return story;
 	}
 
+	//returns Map (Name, Value) read from file
 	public static Map<String, Integer> getStatsList(String path) {
 		if (pathExists(path)) {
 			Map<String, Integer> list1 = new HashMap<String, Integer>();
@@ -95,7 +96,13 @@ public class Utility {
 		return null;
 	}
 
+	//Show in game message
 	public static void showMessage(String message) {
+		System.out.println(message);
+	}
+
+	//show Error message
+	public static void showErrorMessage(String message) {
 		System.out.println(message);
 	}
 }

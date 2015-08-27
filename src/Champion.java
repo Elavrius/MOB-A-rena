@@ -429,6 +429,7 @@ public class Champion {
 	public String getStory() {
 		return story;
 	}
+
 	public Image getIcon(){
 		return icon;
 	}
